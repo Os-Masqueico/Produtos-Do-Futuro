@@ -1,0 +1,112 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Joti+One&display=swap');
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        background-color: #333;
+        height: 1350px;
+    }
+
+    nav.navBarDefault>div#navListLinks>a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav.navBarScroll>div#navListLinks>a {
+        color: black;
+        text-decoration: none;
+    }
+
+    nav#mainNavBar>div#navListLinks>a:hover {
+        color: #23c5c2;
+        transform: perspective(1px) scale(1.1);
+        text-shadow: 0px 0px 5px #23c5c2;
+    }
+
+    nav.navBarScroll h1 {
+        color: black;
+    }
+
+    nav#mainNavBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+        position: sticky;
+        top: 1px;
+    }
+
+    nav.navBarDefault {
+        background-color: transparent;
+    }
+
+    nav.navBarScroll {
+        color: rgb(0, 0, 0);
+        background-color: white;
+    }
+
+    @keyframes _changeNavState-to-Scroll {
+        0% {
+            color: white;
+            background-color: transparent;
+        }
+
+        50% {
+            color: black;
+        }
+
+        100% {
+            background-color: white;
+        }
+    }
+
+    @keyframes _changeNavState-to-default {
+        0% {
+            color: black;
+            background-color: white;
+        }
+
+        50% {
+            color: white;
+        }
+
+        100% {
+            background-color: transparent;
+        }
+
+    }
+</style>
+
+<script>
+    window.addEventListener('scroll', function () {
+        var nav = document.getElementById('mainNavBar');
+        if (window.scrollY > 40) {
+            nav.style.animation = '_changeNavState-to-Scroll 0.5s linear';
+            nav.className = 'navBarScroll';
+        } else {
+            nav.style.animation = '_changeNavState-to-default 0.5s linear';
+            nav.className = 'navBarDefault';
+        }
+    });
+</script>
+<nav id="mainNavBar" class="navBarDefault"
+    style="display:flex;justify-content: space-between;align-items: center;color: white;padding: 20px 10px; position: sticky; top: 1px;">
+    <div style="display: flex; align-items: center;">
+        <img src="../assets/logo/logo.png" style=" width: 100px; height: fit-content;">
+        <h1 style="font-family: Joti One; letter-spacing: -2px; font-size: 27px; font-weight: 100;">
+            Produtos do Futuro</h1>
+    </div>
+
+    <div id="navListLinks" style="display: flex; width: 45%; justify-content: space-between; margin-right: 10px;">
+        <a href="">Para Empresas</a>
+        <a href="">Trabalhe Conosco</a>
+        <a href="">Explorar</a>
+        <a href="">Sobre Nós</a>
+        <a href="">Cadastre</a>
+        <a href="">Entrar</a>
+    </div>
+</nav>
