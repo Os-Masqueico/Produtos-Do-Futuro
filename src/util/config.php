@@ -7,3 +7,4 @@ define('IMG_PATH', ROOT_PATH . 'assets/');
 define('SITE_NAME', 'Produtos do Futuro');
 define('SITE_LOGO', IMG_PATH . 'logo/logo.png');
 define('NAV_BAR', file_get_contents(ROOT_PATH . 'util/global/navbar.html'));
+define('BOOTSTRAP', file_get_contents(ROOT_PATH . 'util/global/bootstrap.html'));

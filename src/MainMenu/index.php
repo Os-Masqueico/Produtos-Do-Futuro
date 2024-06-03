@@ -8,6 +8,7 @@
     include_once '../util/config.php';
     echo '<title>' . SITE_NAME . '</title>';
     echo '<link rel="icon" href="' . SITE_LOGO . '">';
+    echo BOOTSTRAP;
     ?>
 </head>
 
@@ -15,6 +16,8 @@
     <?php
     echo NAV_BAR;
     ?>
+
+
 
 </body>
 

@@ -14,11 +14,13 @@
     nav.navBarDefault>div#navListLinks>a {
         color: white;
         text-decoration: none;
+        user-select: none;
     }
 
     nav.navBarScroll>div#navListLinks>a {
         color: black;
         text-decoration: none;
+        user-select: none;
     }
 
     nav#mainNavBar>div#navListLinks>a:hover {
@@ -93,11 +95,12 @@
         }
     });
 </script>
+
 <nav id="mainNavBar" class="navBarDefault"
     style="display:flex;justify-content: space-between;align-items: center;color: white;padding: 20px 10px; position: sticky; top: 1px;">
     <div style="display: flex; align-items: center;">
-        <img src="../assets/logo/logo.png" style=" width: 100px; height: fit-content;">
-        <h1 style="font-family: Joti One; letter-spacing: -2px; font-size: 27px; font-weight: 100;">
+        <img src="../assets/logo/logo.png" style=" width: 100px; height: fit-content; user-select: none;">
+        <h1 style="font-family: Joti One; letter-spacing: -2px; font-size: 27px; font-weight: 100; user-select: none;">
             Produtos do Futuro</h1>
     </div>
 
